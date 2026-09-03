@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Δρ. Γεώργιος Ι. Καραμπουτάκης — Ψυχίατρος | Αθήνα &amp; Γλυφάδα</title>
+<meta name="description" content="Δρ. Γεώργιος Ι. Καραμπουτάκης, MD, MSc, PhD — Ψυχίατρος. Κλινική ψυχιατρική, γνωσιακή ψυχοθεραπεία, r-TMS, δικανική ψυχιατρική και διαμεσολάβηση. Ιατρεία σε Αθήνα (Πλ. Μαβίλη) και Γλυφάδα.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0C1E2C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Δρ. Γεώργιος Ι. Καραμπουτάκης — Ψυχίατρος">
+<meta property="og:description" content="Ψυχιατρική, ψυχοθεραπεία, r-TMS και δικανική ψυχιατρική σε Αθήνα και Γλυφάδα.">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.jpg" fetchpriority="high">
+<style>
+/* ============================ TOKENS ============================ */
+:root{
+  --ink:#0C1E2C; --ink-2:#14324A; --ink-3:#20465F;
+  --paper:#F7F3ED; --paper-2:#EFE8DE; --card:#FFFFFF;
+  --bronze:#B08856; --bronze-d:#8B6739; --sky:#9FBECB;
+  --body:#3A4A55; --muted:#6C7C87;
+  --line:rgba(12,30,44,.13); --line-d:rgba(255,255,255,.16);
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(3.6rem,7vw,7rem);
+  --wrap:min(1240px,90%);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.72;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.005em}
+h1{font-size:clamp(2.5rem,1.5rem + 4.2vw,5rem)}
+h2{font-size:clamp(2rem,1.4rem + 2.4vw,3.3rem)}
+h3{font-size:clamp(1.3rem,1.1rem + .7vw,1.7rem)}
+p{margin:0 0 1.05em}
+p:last-child{margin-bottom:0}
+::selection{background:var(--bronze);color:#fff}
+:focus-visible{outline:2px solid var(--bronze);outline-offset:3px}
+
+.wrap{width:var(--wrap);margin-inline:auto}
+.sec{padding-block:var(--pad)}
+.eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--bronze-d);margin-bottom:1.1rem}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--bronze)}
+.on-dark .eyebrow{color:var(--sky)}
+.on-dark .eyebrow::before{background:var(--sky)}
+.lead{font-size:clamp(1.03rem,1rem + .28vw,1.17rem);color:var(--body)}
+.dim{color:var(--muted)}
+.on-dark{background:var(--ink);color:#C8D6DE}
+.on-dark h1,.on-dark h2,.on-dark h3,.on-dark h4{color:#fff}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.92rem 1.7rem;border-radius:2px;font-size:.78rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;border:1px solid transparent;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease),transform .35s var(--ease)}
+.btn-p{background:var(--bronze);color:#fff}
+.btn-p:hover{background:var(--bronze-d);transform:translateY(-2px)}
+.btn-o{border-color:rgba(255,255,255,.42);color:#fff}
+.btn-o:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.btn-d{border-color:var(--line);color:var(--ink)}
+.btn-d:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+
+/* ============================ HEADER ============================ */
+.hdr{position:fixed;inset:0 0 auto 0;z-index:70;transition:background .45s var(--ease),box-shadow .45s var(--ease),padding .45s var(--ease);padding-block:1.05rem}
+.hdr-in{width:var(--wrap);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.brand{display:flex;align-items:center;gap:.85rem;min-width:0}
+.brand img{width:44px;height:44px;object-fit:contain;filter:brightness(0) invert(1);transition:filter .45s var(--ease)}
+.brand-tx{display:grid;line-height:1.15;min-width:0}
+.bn-short{display:none}
+.brand-tx b{font-family:var(--serif);font-weight:600;font-size:1.06rem;color:#fff;letter-spacing:.01em;white-space:nowrap;transition:color .45s var(--ease)}
+.brand-tx span{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.68);transition:color .45s var(--ease)}
+.nav{display:flex;align-items:center;gap:1.85rem}
+.nav a{font-size:.75rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.86);position:relative;padding-block:.35rem;transition:color .35s var(--ease)}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--bronze);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.hdr-right{display:flex;align-items:center;gap:.9rem}
+.lang{display:flex;align-items:center;gap:.15rem;border:1px solid rgba(255,255,255,.28);border-radius:2px;padding:2px;transition:border-color .45s var(--ease)}
+.lang button{display:flex;align-items:center;gap:.4rem;background:none;border:0;cursor:pointer;color:rgba(255,255,255,.8);font-family:var(--sans);font-size:.66rem;font-weight:600;letter-spacing:.1em;padding:.4rem .6rem;border-radius:1px;transition:background .3s var(--ease),color .3s var(--ease)}
+.lang button[aria-pressed="true"]{background:var(--bronze);color:#fff}
+/* flags: fixed 3:2 box + slice — never letterbox, never a gap above or below */
+.flag{display:block;width:18px;height:12px;border-radius:2px;overflow:hidden;flex:none;line-height:0;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.flag svg{display:block;width:100%;height:100%}
+.burger{display:none;width:44px;height:44px;border:1px solid rgba(255,255,255,.28);background:none;border-radius:2px;cursor:pointer;place-items:center;transition:border-color .45s var(--ease)}
+.burger span{display:block;width:18px;height:1.5px;background:#fff;margin:3px 0;transition:background .45s var(--ease)}
+
+.hdr.stuck{background:rgba(247,243,237,.94);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);box-shadow:0 1px 0 var(--line);padding-block:.62rem}
+.hdr.stuck .brand img{filter:none}
+.hdr.stuck .brand-tx b{color:var(--ink)}
+.hdr.stuck .brand-tx span{color:var(--muted)}
+.hdr.stuck .nav a{color:var(--ink-2)}
+.hdr.stuck .lang{border-color:var(--line)}
+.hdr.stuck .lang button{color:var(--ink-2)}
+.hdr.stuck .lang button[aria-pressed="true"]{color:#fff}
+.hdr.stuck .burger{border-color:var(--line)}
+.hdr.stuck .burger span{background:var(--ink)}
+
+/* mobile nav */
+.mnav{position:fixed;inset:0;z-index:90;background:var(--ink);display:grid;grid-template-rows:auto 1fr auto;opacity:0;visibility:hidden;transition:opacity .4s var(--ease),visibility .4s}
+.mnav.open{opacity:1;visibility:visible}
+.mnav-top{display:flex;justify-content:flex-end;padding:1.1rem 5%}
+.mclose{width:48px;height:48px;border:1px solid var(--line-d);background:none;border-radius:2px;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:background .3s var(--ease)}
+.mclose:hover{background:rgba(255,255,255,.09)}
+.mnav nav{display:grid;align-content:center;gap:.2rem;padding:0 8%}
+.mnav nav a{font-family:var(--serif);font-size:clamp(1.7rem,7vw,2.4rem);color:#fff;padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,.09)}
+.mnav-foot{padding:1.6rem 8% 2.4rem;display:grid;gap:.4rem;color:var(--sky);font-size:.9rem}
+.mnav-foot a{color:#fff;font-weight:500}
+
+/* ============================ HERO ============================ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink)}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:52% 46%;will-change:transform;transform:scale(1.09);animation:heroIn 2.8s var(--ease) forwards}
+@keyframes heroIn{to{transform:scale(1)}}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,16,24,.72) 0%,rgba(6,16,24,.28) 34%,rgba(6,16,24,.66) 74%,rgba(6,16,24,.95) 100%)}
+.hero-in{position:relative;z-index:2;width:var(--wrap);margin-inline:auto;padding-block:9rem clamp(4.6rem,9vw,6.4rem)}
+.hero .tag{display:inline-block;font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,1rem + .5vw,1.4rem);color:var(--sky);margin-bottom:.9rem}
+.hero h1{color:#fff;max-width:16ch;text-wrap:balance;text-shadow:0 2px 40px rgba(0,0,0,.4)}
+.hero .sub{margin-top:1.2rem;font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.82);font-weight:500}
+.hero .lead{margin-top:1.5rem;max-width:58ch;color:rgba(232,238,243,.9)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2.2rem}
+.scroll-cue{position:absolute;left:50%;bottom:1.5rem;transform:translateX(-50%);z-index:3;width:1px;height:52px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.55));overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;inset:0;background:#fff;animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:translateY(-100%)}60%,100%{transform:translateY(100%)}}
+
+/* ============================ CRED STRIP ============================ */
+.creds{background:var(--ink-2);color:#D6E2E9}
+.creds-in{width:var(--wrap);margin-inline:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.14)}
+.cred{background:var(--ink-2);padding:clamp(1.5rem,3vw,2.3rem) clamp(1rem,2vw,1.5rem);display:grid;gap:.4rem;align-content:start}
+.cred b{font-family:var(--serif);font-size:clamp(1.5rem,1.2rem + 1vw,2.1rem);color:#fff;font-weight:500;line-height:1}
+.cred span{font-size:.76rem;letter-spacing:.05em;color:var(--sky);line-height:1.5}
+
+/* ============================ DOCTOR ============================ */
+.doc-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(2.4rem,5vw,4.6rem);align-items:start}
+.doc-fig{position:relative}
+.doc-fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%}
+.doc-fig figcaption{margin-top:.85rem;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.doc-fig::after{content:"";position:absolute;left:-14px;top:-14px;width:96px;height:96px;border-left:1px solid var(--bronze);border-top:1px solid var(--bronze);pointer-events:none}
+.sig{margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line);display:grid;gap:.15rem}
+.sig b{font-family:var(--serif);font-size:1.35rem;color:var(--ink);font-weight:600}
+.sig span{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--bronze-d)}
+
+/* ============================ CHIPS ============================ */
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.2rem}
+.chip{border:1px solid var(--line);background:var(--card);padding:.6rem 1.05rem;border-radius:100px;font-size:.86rem;color:var(--ink-2);transition:border-color .3s var(--ease),color .3s var(--ease),transform .3s var(--ease)}
+.chip:hover{border-color:var(--bronze);color:var(--bronze-d);transform:translateY(-2px)}
+.on-dark .chip{background:rgba(255,255,255,.05);border-color:var(--line-d);color:#DCE7ED}
+.on-dark .chip:hover{border-color:var(--sky);color:#fff}
+
+/* ============================ SERVICES ============================ */
+.srv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}
+.srv article{background:var(--paper);padding:clamp(1.7rem,2.6vw,2.4rem);display:grid;gap:.85rem;align-content:start;transition:background .4s var(--ease)}
+.srv article:hover{background:var(--card)}
+.srv .no{font-family:var(--serif);font-size:1.05rem;color:var(--bronze);letter-spacing:.06em}
+.srv h3{font-size:1.24rem;line-height:1.24}
+.srv p{font-size:.935rem;color:var(--body);margin:0}
+
+/* ============================ FEATURE BANDS ============================ */
+.band{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.band-fig{position:relative;min-height:clamp(320px,42vw,560px);overflow:hidden}
+.band-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band-tx{padding:clamp(2.6rem,5vw,5rem) clamp(1.6rem,4vw,4.4rem);display:grid;align-content:center}
+.band.rev .band-fig{order:2}
+.ticks{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.75rem}
+.ticks li{position:relative;padding-left:1.65rem;font-size:.95rem}
+.ticks li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:9px;border-left:1px solid var(--bronze);border-bottom:1px solid var(--bronze);transform:rotate(-45deg)}
+.on-dark .ticks li::before{border-color:var(--sky)}
+
+/* ============================ TIMELINE ============================ */
+.tl{margin-top:3rem;display:grid;gap:0;border-top:1px solid var(--line-d)}
+.tl-row{display:grid;grid-template-columns:170px minmax(0,1fr);gap:clamp(1rem,3vw,2.6rem);padding-block:1.5rem;border-bottom:1px solid var(--line-d);align-items:start}
+.tl-row time{font-family:var(--serif);font-size:1.28rem;color:var(--sky);letter-spacing:.02em}
+.tl-row h4{font-size:1.1rem;font-family:var(--sans);font-weight:600;color:#fff;margin-bottom:.3rem;letter-spacing:0}
+.tl-row p{font-size:.93rem;color:#B4C6D0;margin:0}
+
+/* ============================ TEAM ============================ */
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.4rem,3vw,2.4rem);margin-top:3rem}
+.member{background:var(--card);border:1px solid var(--line);display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);align-items:center;gap:clamp(1.1rem,2.4vw,1.9rem);padding:1.15rem}
+.member img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;object-position:50% 30%}
+.member h3{font-size:1.28rem;margin-bottom:.2rem}
+.member span{font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--bronze-d)}
+.member p{margin-top:.7rem;font-size:.92rem}
+
+/* ============================ PARTNERS ============================ */
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.6rem}
+.pgrid a{background:var(--card);min-height:130px;display:grid;place-items:center;padding:1.5rem;transition:background .35s var(--ease)}
+.pgrid a:hover{background:var(--paper-2)}
+.pgrid img{max-height:64px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .4s var(--ease),opacity .4s var(--ease)}
+.pgrid a:hover img{filter:none;opacity:1}
+
+/* ============================ OFFICES ============================ */
+.off{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(2rem,4vw,3.6rem);margin-top:3rem}
+.off-card{display:grid;gap:1.4rem;align-content:start}
+.off-shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto;gap:8px}
+.off-shots a:first-child{grid-column:1/-1}
+.off-shots img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
+.off-shots a:first-child img{aspect-ratio:16/9}
+.off-meta{display:grid;gap:.5rem;font-size:.95rem}
+.off-meta .row{display:grid;grid-template-columns:96px minmax(0,1fr);gap:.8rem;padding-block:.5rem;border-bottom:1px solid var(--line)}
+.off-meta .row b{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:.2em}
+
+/* ============================ MEDIA ============================ */
+.mme{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line-d);border:1px solid var(--line-d);margin-top:2.8rem}
+.mme div{background:var(--ink);padding:1.6rem;display:grid;gap:.45rem;align-content:start}
+.mme span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sky)}
+.mme p{font-size:.98rem;color:#DCE7ED;margin:0;font-family:var(--serif);font-size:1.12rem;line-height:1.35}
+
+/* ============================ CONTACT ============================ */
+.ct{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2.2rem,5vw,4.4rem);align-items:start}
+.field{display:grid;gap:.4rem;margin-bottom:1rem}
+.field label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.field input,.field textarea{font-family:var(--sans);font-size:.97rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:.82rem .95rem;width:100%;transition:border-color .3s var(--ease)}
+.field textarea{min-height:132px;resize:vertical}
+.field input:focus,.field textarea:focus{border-color:var(--bronze);outline:none}
+.hp{position:absolute;left:-9999px}
+.ct-list{display:grid;gap:0;border-top:1px solid var(--line)}
+.ct-list .row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:1rem;padding-block:1.05rem;border-bottom:1px solid var(--line);font-size:.97rem}
+.ct-list .row b{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;padding-top:.25em}
+.ct-list a:hover{color:var(--bronze-d)}
+.note{margin-top:1rem;font-size:.86rem;color:var(--muted)}
+
+/* ============================ FOOTER ============================ */
+.ft{background:var(--ink);color:#9FB3BF;padding-block:clamp(3rem,5vw,4.4rem) 0}
+.ft-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:clamp(1.8rem,4vw,3rem);padding-bottom:2.8rem;border-bottom:1px solid var(--line-d)}
+.ft h4{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#fff;font-family:var(--sans);font-weight:600;margin-bottom:1.1rem}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;font-size:.92rem}
+.ft a:hover{color:#fff}
+.ft-brand{display:flex;align-items:center;gap:.85rem;margin-bottom:1.1rem}
+.ft-brand img{width:46px;height:46px;object-fit:contain;filter:brightness(0) invert(1)}
+.ft-brand b{font-family:var(--serif);font-size:1.14rem;color:#fff;font-weight:600}
+.ft-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-block:1.5rem;font-size:.82rem}
+.ft-bot a{color:#fff}
+
+/* ============================ LIGHTBOX ============================ */
+.lb{position:fixed;inset:0;z-index:120;background:rgba(6,14,20,.96);display:grid;place-items:center;padding:clamp(1rem,4vw,3rem);opacity:0;visibility:hidden;transition:opacity .35s var(--ease),visibility .35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:100%;max-height:86vh;object-fit:contain;box-shadow:0 30px 90px rgba(0,0,0,.5)}
+.lb-x{position:absolute;top:1rem;right:1rem;width:48px;height:48px;border:1px solid var(--line-d);background:none;color:#fff;font-size:1.5rem;line-height:1;cursor:pointer;border-radius:2px}
+.lb-cap{position:absolute;left:0;right:0;bottom:1.1rem;text-align:center;color:#B9CAD4;font-size:.85rem;padding-inline:1rem}
+
+/* ============================ REVEAL ============================ */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .95s var(--ease),transform .95s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.09s}.rv.d2{transition-delay:.18s}.rv.d3{transition-delay:.27s}.rv.d4{transition-delay:.36s}
+
+/* ============================ RESPONSIVE ============================ */
+@media(max-width:1080px){
+  .nav{display:none}
+  .burger{display:grid}
+  .srv{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .doc-grid,.ct,.off,.team{grid-template-columns:1fr}
+  .doc-fig img{height:auto;aspect-ratio:16/11;object-position:50% 25%}
+  .band{grid-template-columns:1fr}
+  .band.rev .band-fig{order:0}
+  .ft-top{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mme{grid-template-columns:repeat(1,minmax(0,1fr))}
+}
+@media(max-width:720px){
+  .creds-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .srv{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tl-row{grid-template-columns:1fr;gap:.45rem}
+  .member{grid-template-columns:1fr}
+  .member img{height:auto;aspect-ratio:16/11;object-position:50% 25%}
+  .hero-in{padding-block:7.5rem 4rem}
+  .hero-cta .btn{width:100%}
+  .ft-top{grid-template-columns:1fr}
+  .off-meta .row,.ct-list .row{grid-template-columns:1fr;gap:.2rem}
+}
+/* mobile header: keep the lockup, the toggle and the burger from colliding */
+@media(max-width:900px){
+  .brand-tx span{display:none}
+}
+@media(max-width:640px){
+  .bn-long{display:none}
+  .bn-short{display:block}
+}
+@media(max-width:520px){
+  .lang button{font-size:0;gap:0;padding:.4rem .5rem}
+  .lang button .flag{width:22px;height:15px}
+  .brand img{width:40px;height:40px}
+  .brand{gap:.55rem}
+  .hdr-in{gap:.6rem}
+  .brand-tx b{font-size:.86rem}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-media img{animation:none;transform:none}
+  .scroll-cue::after{animation:none}
+}
+</style>
+</head>
+<body id="top">
+
+<!-- ============================ HEADER ============================ -->
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="brand" href="#top" aria-label="Αρχική">
+      <img src="assets/logo.png" width="44" height="44" alt="Λογότυπο ιατρείου">
+      <span class="brand-tx">
+        <b class="bn-long" data-i18n="brand">Δρ. Γεώργιος Ι. Καραμπουτάκης</b>
+        <b class="bn-short" data-i18n="brandShort">Δρ. Καραμπουτάκης</b>
+        <span data-i18n="brandSub">MD, MSc, PhD — Ψυχίατρος</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Κύρια πλοήγηση">
+      <a href="#iatros" data-i18n="navDoctor">Ο Ιατρός</a>
+      <a href="#ypiresies" data-i18n="navServices">Υπηρεσίες</a>
+      <a href="#rtms">r-TMS</a>
+      <a href="#dikaniki" data-i18n="navForensic">Δικανική</a>
+      <a href="#viografiko" data-i18n="navCv">Βιογραφικό</a>
+      <a href="#iatreia" data-i18n="navOffices">Ιατρεία</a>
+    </nav>
+    <div class="hdr-right">
+      <div class="lang" role="group" aria-label="Γλώσσα">
+        <button type="button" data-lang="el" aria-pressed="true" aria-label="Ελληνικά">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 27 18" preserveAspectRatio="xMidYMid slice"><rect width="27" height="18" fill="#0d5eaf"/><g fill="#fff"><rect y="2" width="27" height="2"/><rect y="6" width="27" height="2"/><rect y="10" width="27" height="2"/><rect y="14" width="27" height="2"/></g><rect width="10" height="10" fill="#0d5eaf"/><g fill="#fff"><rect x="4" width="2" height="10"/><rect y="4" width="10" height="2"/></g></svg></span>ΕΛ
+        </button>
+        <button type="button" data-lang="en" aria-pressed="false" aria-label="English">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><clipPath id="ukc"><path d="M0 0h60v30H0z"/></clipPath><g clip-path="url(#ukc)"><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></g></svg></span>EN
+        </button>
+      </div>
+      <button class="burger" id="burger" aria-label="Μενού" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Μενού">
+  <div class="mnav-top"><button class="mclose" id="mclose" aria-label="Κλείσιμο">&#10005;</button></div>
+  <nav>
+    <a href="#iatros" data-i18n="navDoctor">Ο Ιατρός</a>
+    <a href="#ypiresies" data-i18n="navServices">Υπηρεσίες</a>
+    <a href="#rtms">r-TMS</a>
+    <a href="#dikaniki" data-i18n="navForensic">Δικανική</a>
+    <a href="#viografiko" data-i18n="navCv">Βιογραφικό</a>
+    <a href="#iatreia" data-i18n="navOffices">Ιατρεία</a>
+    <a href="#epikoinonia" data-i18n="navContact">Επικοινωνία</a>
+  </nav>
+  <div class="mnav-foot">
+    <a href="tel:+306939005001">6939 005 001</a>
+    <a href="tel:+302104409440">210 44 09 440</a>
+    <a href="mailto:info@myshrink.gr">info@myshrink.gr</a>
+  </div>
+</div>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-media" aria-hidden="true">
+    <img src="assets/hero.jpg" width="2560" height="1709" fetchpriority="high" decoding="async" alt="">
+  </div>
+  <div class="hero-in">
+    <span class="tag rv in" data-i18n="heroTag">Ψυχιατρική &amp; Ψυχοθεραπεία</span>
+    <h1 id="h1" class="rv in d1" data-i18n="heroTitle">Χώρος για να ακουστεί αυτό που δύσκολα λέγεται.</h1>
+    <p class="sub rv in d2" data-i18n="heroSub">Δρ. Γεώργιος Ι. Καραμπουτάκης · MD, MSc, PhD</p>
+    <p class="lead rv in d3" data-i18n="heroLead">Κλινική ψυχιατρική, γνωσιακή ψυχοθεραπεία, r-TMS και δικανική ψυχιατρική, σε δύο ιατρεία — στο κέντρο της Αθήνας και στη Γλυφάδα.</p>
+    <div class="hero-cta rv in d4">
+      <a class="btn btn-p" href="#epikoinonia" data-i18n="ctaBook">Κλείστε ραντεβού</a>
+      <a class="btn btn-o" href="#ypiresies" data-i18n="ctaServices">Οι υπηρεσίες</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- ============================ CREDENTIALS ============================ -->
+<section class="creds" aria-label="Στοιχεία">
+  <div class="creds-in">
+    <div class="cred rv"><b>PhD</b><span data-i18n="cred1">Διδάκτωρ Ιατρικής Σχολής ΕΚΠΑ</span></div>
+    <div class="cred rv d1"><b>r-TMS</b><span data-i18n="cred2">Πιστοποιημένη εφαρμογή επαναλαμβανόμενου διακρανιακού μαγνητικού ερεθισμού</span></div>
+    <div class="cred rv d2"><b data-i18n="cred3n">2 ιατρεία</b><span data-i18n="cred3">Αθήνα, Πλ. Μαβίλη &amp; Γλυφάδα</span></div>
+    <div class="cred rv d3"><b>HAPA</b><span data-i18n="cred4">Πρόεδρος της Ελληνοαμερικανικής Ψυχιατρικής Εταιρείας</span></div>
+  </div>
+</section>
+
+<!-- ============================ DOCTOR ============================ -->
+<section class="sec" id="iatros">
+  <div class="wrap doc-grid">
+    <figure class="doc-fig rv" style="margin:0">
+      <img src="assets/portrait.jpg" width="960" height="1200" loading="lazy" alt="Ο ψυχίατρος Δρ. Γεώργιος Ι. Καραμπουτάκης στο ιατρείο του" data-lb data-cap="Δρ. Γεώργιος Ι. Καραμπουτάκης, MD, MSc, PhD">
+      <figcaption data-i18n="docCap">Δρ. Γεώργιος Ι. Καραμπουτάκης, Ψυχίατρος</figcaption>
+    </figure>
+    <div class="rv d1">
+      <span class="eyebrow" data-i18n="docEyebrow">Ο Ιατρός</span>
+      <h2 data-i18n="docTitle">Μια θεραπευτική σχέση χτίζεται πρώτα σε εμπιστοσύνη.</h2>
+      <p class="lead" style="margin-top:1.4rem" data-i18n="docP1">Ο Δρ. Γεώργιος Ι. Καραμπουτάκης είναι ψυχίατρος, Διδάκτωρ του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών και κάτοχος Μεταπτυχιακού Τίτλου του ΕΚΠΑ. Ειδικεύτηκε στην Α΄ Πανεπιστημιακή Ψυχιατρική Κλινική του Αιγινητείου Νοσοκομείου και σήμερα ασκεί ιδιωτικά την ψυχιατρική, ενώ παράλληλα είναι κλινικός ψυχίατρος στο Ερρίκος Ντυνάν Hospital Center.</p>
+      <p data-i18n="docP2">Έχει μεγάλη εμπειρία στη διαχείριση και αντιμετώπιση καταστάσεων όπως οι κρίσεις πανικού, το άγχος, οι φοβίες, η κατάθλιψη, η ιδεοψυχαναγκαστική διαταραχή, η άνοια, οι διαταραχές ύπνου, οι ψυχώσεις, οι ψυχοσωματικές εκδηλώσεις, οι εξαρτήσεις και οι διαταραχές προσαρμογής σε νέες συνθήκες ζωής.</p>
+      <p data-i18n="docP3">Η προσέγγισή του συνδυάζει τη βιολογική ψυχιατρική με τη γνωσιακή ψυχοθεραπεία: κάθε πλάνο σχεδιάζεται για τον συγκεκριμένο άνθρωπο, επανεξετάζεται τακτικά και εξηγείται με λόγια που καταλαβαίνει. Πέρα από το ιατρείο, δραστηριοποιείται στη δικανική ψυχιατρική ως πραγματογνώμονας των Πρωτοδικείων και Εισαγγελιών Αθηνών και Πειραιώς και ως διαπιστευμένος διαμεσολαβητής του Υπουργείου Δικαιοσύνης.</p>
+      <div class="sig">
+        <b data-i18n="brand">Δρ. Γεώργιος Ι. Καραμπουτάκης</b>
+        <span data-i18n="brandSub">MD, MSc, PhD — Ψυχίατρος</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONDITIONS ============================ -->
+<section class="sec on-dark" id="pedia">
+  <div class="wrap">
+    <div style="max-width:62ch">
+      <span class="eyebrow rv" data-i18n="condEyebrow">Πεδία αντιμετώπισης</span>
+      <h2 class="rv d1" data-i18n="condTitle">Τι φέρνουν συνήθως οι άνθρωποι σε αυτό το ιατρείο.</h2>
+      <p class="lead rv d2" style="margin-top:1.3rem;color:#B9CBD5" data-i18n="condLead">Δεν χρειάζεται να ξέρετε το όνομα αυτού που σας συμβαίνει για να ζητήσετε βοήθεια. Η πρώτη συνάντηση υπάρχει ακριβώς γι' αυτό — να ονομαστεί με ακρίβεια και να αποκτήσει πλάνο.</p>
+    </div>
+    <div class="chips rv d3">
+      <span class="chip" data-i18n="c1">Κρίσεις πανικού</span>
+      <span class="chip" data-i18n="c2">Άγχος &amp; στρες</span>
+      <span class="chip" data-i18n="c3">Φοβίες</span>
+      <span class="chip" data-i18n="c4">Κατάθλιψη</span>
+      <span class="chip" data-i18n="c5">Ιδεοψυχαναγκαστική διαταραχή</span>
+      <span class="chip" data-i18n="c6">Διαταραχές ύπνου</span>
+      <span class="chip" data-i18n="c7">Άνοια &amp; νοητική έκπτωση</span>
+      <span class="chip" data-i18n="c8">Ψυχώσεις</span>
+      <span class="chip" data-i18n="c9">Εξαρτήσεις από αλκοόλ &amp; ουσίες</span>
+      <span class="chip" data-i18n="c10">Μετατραυματικό στρες</span>
+      <span class="chip" data-i18n="c11">Ψυχοσωματικές εκδηλώσεις</span>
+      <span class="chip" data-i18n="c12">Διαταραχές προσαρμογής</span>
+      <span class="chip" data-i18n="c13">Δυσκολίες σε διαπροσωπικές σχέσεις</span>
+      <span class="chip" data-i18n="c14">Νευρώσεις</span>
+      <span class="chip" data-i18n="c15">Σεξουαλικές δυσλειτουργίες</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SERVICES ============================ -->
+<section class="sec" id="ypiresies">
+  <div class="wrap">
+    <div style="max-width:64ch">
+      <span class="eyebrow rv" data-i18n="srvEyebrow">Υπηρεσίες</span>
+      <h2 class="rv d1" data-i18n="srvTitle">Εννέα υπηρεσίες, ένα ενιαίο πλαίσιο φροντίδας.</h2>
+      <p class="lead rv d2" style="margin-top:1.3rem" data-i18n="srvLead">Από την πρώτη διαγνωστική εκτίμηση έως τη γνωμάτευση που ζητά ένας φορέας ή ένα δικαστήριο, όλα γίνονται στο ίδιο ιατρείο, από τον ίδιο ιατρό, με συνεχή παρακολούθηση.</p>
+    </div>
+    <div class="srv">
+      <article class="rv"><span class="no">01</span><h3 data-i18n="s1t">Κλινική ψυχιατρική διάγνωση</h3><p data-i18n="s1d">Αναλυτική κλινική εκτίμηση με λήψη πλήρους ιστορικού, ψυχική εξέταση και, όπου χρειάζεται, εργαστηριακό ή απεικονιστικό έλεγχο για τον αποκλεισμό οργανικών αιτίων. Καταλήγει σε σαφή διάγνωση και σε θεραπευτικό πλάνο που συζητείται μαζί σας βήμα προς βήμα.</p></article>
+      <article class="rv d1"><span class="no">02</span><h3 data-i18n="s2t">Γνωσιακή ψυχοθεραπεία</h3><p data-i18n="s2d">Δομημένη θεραπευτική παρέμβαση που εντοπίζει τα μοτίβα σκέψης και συμπεριφοράς που συντηρούν το σύμπτωμα και τα δουλεύει συστηματικά. Οι συνεδρίες είναι ατομικές, με συγκεκριμένους στόχους και τακτική επανεκτίμηση της προόδου.</p></article>
+      <article class="rv d2"><span class="no">03</span><h3 data-i18n="s3t">Φαρμακευτική αγωγή &amp; παρακολούθηση</h3><p data-i18n="s3d">Συνταγογράφηση και παρακολούθηση χρόνιας φαρμακευτικής αγωγής με βάση τη σύγχρονη ψυχοφαρμακολογία: επιλογή σχήματος, τιτλοποίηση δόσης, διαχείριση ανεπιθύμητων ενεργειών και σχεδιασμένη σταδιακή απόσυρση όταν έρθει η ώρα.</p></article>
+      <article class="rv"><span class="no">04</span><h3 data-i18n="s4t">Κλινική αξιολόγηση μνημονικής λειτουργίας</h3><p data-i18n="s4d">Εκτίμηση μνήμης, προσοχής και εκτελεστικών λειτουργιών με σταθμισμένα εργαλεία, για την έγκαιρη ανίχνευση νοητικής έκπτωσης και άνοιας. Η αξιολόγηση συνοδεύεται από γραπτό πόρισμα και οδηγίες παρακολούθησης για την οικογένεια.</p></article>
+      <article class="rv d1"><span class="no">05</span><h3 data-i18n="s5t">Πιστοποιημένες ψυχομετρικές δοκιμασίες</h3><p data-i18n="s5d">Χορήγηση και ερμηνεία σταθμισμένων δοκιμασιών όπως WAIS-IV, MMPI-2 και TAT, για την αντικειμενική αποτύπωση νοητικών ικανοτήτων και χαρακτηριστικών προσωπικότητας. Τα αποτελέσματα συνδέονται πάντα με την κλινική εικόνα, ποτέ διαβασμένα μεμονωμένα.</p></article>
+      <article class="rv d2"><span class="no">06</span><h3 data-i18n="s6t">Έκδοση ψυχιατρικής γνωμάτευσης</h3><p data-i18n="s6d">Γνωματεύσεις για διορισμό ή έναρξη εργασιακής απασχόλησης, για άδεια κατοχής και οπλοφορίας κυνηγετικών και πυροβόλων όπλων, καθώς και για κάθε άλλη χρήση που απαιτεί τεκμηριωμένη ψυχιατρική εκτίμηση, με τήρηση όλων των νόμιμων προϋποθέσεων.</p></article>
+      <article class="rv"><span class="no">07</span><h3 data-i18n="s7t">Δικανική ψυχιατρική</h3><p data-i18n="s7d">Πραγματογνωμοσύνες και υπηρεσίες Τεχνικού Συμβούλου σε ποινικές και αστικές ιατρονομικές υποθέσεις: ζητήματα καταλογισμού, δικαιοπρακτικής ικανότητας, επιμέλειας, ψυχικής βλάβης και αποζημίωσης, με εκθέσεις που αντέχουν στο ακροατήριο.</p></article>
+      <article class="rv d1"><span class="no">08</span><h3 data-i18n="s8t">Διαμεσολάβηση</h3><p data-i18n="s8d">Ως διαπιστευμένος διαμεσολαβητής του Υπουργείου Δικαιοσύνης, ο Δρ. Καραμπουτάκης συντονίζει τη διαδικασία εξωδικαστικής επίλυσης διαφορών — οικογενειακών, αστικών ή εργασιακών — σε ουδέτερο, εμπιστευτικό πλαίσιο.</p></article>
+      <article class="rv d2"><span class="no">09</span><h3 data-i18n="s9t">Ψυχοκοινωνική παρέμβαση</h3><p data-i18n="s9d">Κοινωνική μελέτη συνθηκών διαβίωσης, σύνταξη εκθέσεων, υποστήριξη του ασθενούς και της οικογένειας και συμβουλευτική σε θέματα διαχείρισης ιατροκοινωνικών προβλημάτων, σε συνεργασία με κοινωνική λειτουργό.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ r-TMS ============================ -->
+<section class="band on-dark" id="rtms">
+  <figure class="band-fig" style="margin:0">
+    <img src="assets/detail-clock.jpg" width="2560" height="1709" loading="lazy" alt="Λεπτομέρεια από τον χώρο του ιατρείου στην Αθήνα" data-lb data-cap="Ιατρείο Αθήνας — λεπτομέρεια">
+  </figure>
+  <div class="band-tx">
+    <span class="eyebrow rv">r-TMS</span>
+    <h2 class="rv d1" data-i18n="rtmsTitle">Επαναλαμβανόμενος διακρανιακός μαγνητικός ερεθισμός.</h2>
+    <p class="lead rv d2" style="margin-top:1.3rem;color:#BCCDD7" data-i18n="rtmsLead">Μη επεμβατική, εγκεκριμένη από τον FDA μέθοδος που διεγείρει στοχευμένα περιοχές του εγκεφάλου με μαγνητικούς παλμούς. Εφαρμόζεται σε συνεδρίες, χωρίς αναισθησία και χωρίς νοσηλεία, και ο ασθενής επιστρέφει αμέσως στις δραστηριότητές του.</p>
+    <ul class="ticks rv d3">
+      <li data-i18n="rtms1">Ένδειξη κυρίως σε ανθεκτική κατάθλιψη και σε επιλεγμένες περιπτώσεις ιδεοψυχαναγκαστικής διαταραχής</li>
+      <li data-i18n="rtms2">Πιστοποιημένη εκπαίδευση στην εφαρμογή της μεθόδου</li>
+      <li data-i18n="rtms3">Χωρίς φαρμακευτική επιβάρυνση — συνδυάζεται με την υπόλοιπη αγωγή</li>
+      <li data-i18n="rtms4">Προηγείται πάντα πλήρης κλινική εκτίμηση καταλληλότητας</li>
+    </ul>
+    <div class="hero-cta rv d4"><a class="btn btn-o" href="#epikoinonia" data-i18n="rtmsCta">Ρωτήστε αν σας αφορά</a></div>
+  </div>
+</section>
+
+<!-- ============================ FORENSIC ============================ -->
+<section class="band rev" id="dikaniki">
+  <figure class="band-fig" style="margin:0">
+    <img src="assets/forensic.jpg" width="1709" height="2560" loading="lazy" alt="Βιβλιοθήκη με τόμους δικαστικής ψυχιατρικής και ιατρικού δικαίου" data-lb data-cap="Δικανική ψυχιατρική — η βιβλιοθήκη του ιατρείου">
+  </figure>
+  <div class="band-tx">
+    <span class="eyebrow rv" data-i18n="forEyebrow">Δικανική ψυχιατρική</span>
+    <h2 class="rv d1" data-i18n="forTitle">Όταν η ψυχιατρική συναντά τον νόμο.</h2>
+    <p class="lead rv d2" style="margin-top:1.3rem" data-i18n="forLead">Η δικανική ψυχιατρική απαιτεί δύο πράγματα ταυτόχρονα: κλινική ακρίβεια και γλώσσα που στέκεται νομικά. Ο Δρ. Καραμπουτάκης εργάζεται στο πεδίο αυτό ως πραγματογνώμονας, τεχνικός σύμβουλος και διαπιστευμένος διαμεσολαβητής.</p>
+    <ul class="ticks rv d3">
+      <li data-i18n="for1">Πραγματογνώμονας στα Πρωτοδικεία και τις Εισαγγελίες Αθηνών και Πειραιώς</li>
+      <li data-i18n="for2">Τεχνικός Σύμβουλος σε ποινικές και αστικές ιατρονομικές υποθέσεις</li>
+      <li data-i18n="for3">Διαπιστευμένος Διαμεσολαβητής του Υπουργείου Δικαιοσύνης</li>
+      <li data-i18n="for4">Διευθύνων Σύμβουλος της Ελληνικής Εταιρείας Ιατρών Πραγματογνωμόνων</li>
+      <li data-i18n="for5">Μέλος της Forensic Psychiatry Section της World Psychiatric Association</li>
+    </ul>
+    <div class="hero-cta rv d4"><a class="btn btn-d" href="#epikoinonia" data-i18n="forCta">Επικοινωνία για υπόθεση</a></div>
+  </div>
+</section>
+
+<!-- ============================ CV ============================ -->
+<section class="sec on-dark" id="viografiko">
+  <div class="wrap">
+    <div style="max-width:62ch">
+      <span class="eyebrow rv" data-i18n="cvEyebrow">Βιογραφικό</span>
+      <h2 class="rv d1" data-i18n="cvTitle">Σπουδές, ειδίκευση και θέσεις.</h2>
+    </div>
+    <div class="tl">
+      <div class="tl-row rv"><time data-i18n="cvY1">Ιατρική Σχολή</time><div><h4 data-i18n="cvT1">Πτυχίο Ιατρικής, ΕΚΠΑ</h4><p data-i18n="cvD1">Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών.</p></div></div>
+      <div class="tl-row rv"><time>2009</time><div><h4 data-i18n="cvT2">Harvard Kennedy School of Government, Βοστώνη</h4><p data-i18n="cvD2">Executive Education — «Leadership in Crises».</p></div></div>
+      <div class="tl-row rv"><time>2009–2010</time><div><h4 data-i18n="cvT3">Μεταπτυχιακό (MSc), ΕΚΠΑ</h4><p data-i18n="cvD3">«Διαχείριση Κρίσεων, Μαζικών Καταστροφών &amp; Επειγουσών Καταστάσεων» — κατεύθυνση Οργάνωσης και Διοίκησης.</p></div></div>
+      <div class="tl-row rv"><time>2010–2013</time><div><h4 data-i18n="cvT4">Ειδίκευση στην Ψυχιατρική</h4><p data-i18n="cvD4">Α΄ Πανεπιστημιακή Ψυχιατρική Κλινική ΕΚΠΑ, Αιγινήτειο Νοσοκομείο.</p></div></div>
+      <div class="tl-row rv"><time>2015</time><div><h4 data-i18n="cvT5">Διδακτορικό (PhD), ΕΚΠΑ</h4><p data-i18n="cvD5">«Αξιολόγηση της Επικοινωνιακής Πολιτικής της Υγειονομικής Αρχής κατά τη διαχείριση της πανδημίας γρίπης Η1Ν1».</p></div></div>
+      <div class="tl-row rv"><time>2016–2018</time><div><h4 data-i18n="cvT6">Επιστημονικός Συνεργάτης</h4><p data-i18n="cvD6">Πανεπιστημιακή Ψυχιατρική Κλινική ΕΚΠΑ, Γ.Ν. Κηφισιάς «Οι Άγιοι Ανάργυροι», και Κέντρο Κοινοτικής Ψυχικής Υγείας Ζωγράφου.</p></div></div>
+      <div class="tl-row rv"><time data-i18n="cvY7">Σήμερα</time><div><h4 data-i18n="cvT7">Ιδιωτικό ιατρείο &amp; Ερρίκος Ντυνάν Hospital Center</h4><p data-i18n="cvD7">Άσκηση ιδιωτικής ψυχιατρικής σε Αθήνα και Γλυφάδα· κλινικός ψυχίατρος στο Ερρίκος Ντυνάν Hospital Center.</p></div></div>
+    </div>
+    <h3 class="rv" style="margin-top:3rem;font-size:1.15rem;font-family:var(--sans);font-weight:600;letter-spacing:.02em" data-i18n="cvRoles">Θέσεις &amp; ιδιότητες</h3>
+    <div class="chips rv d1">
+      <span class="chip" data-i18n="r1">Πρόεδρος, Ελληνοαμερικανική Ψυχιατρική Εταιρεία (HAPA)</span>
+      <span class="chip" data-i18n="r2">Πρόεδρος, ΜΙΤΟΣ ΑΜΚΕ</span>
+      <span class="chip" data-i18n="r3">Διευθύνων Σύμβουλος, Ελληνική Εταιρεία Ιατρών Πραγματογνωμόνων</span>
+      <span class="chip" data-i18n="r4">Γραμματέας, Κλάδος Προάσπισης της Ψυχιατρικής Πράξης — Ελληνική Ψυχιατρική Εταιρεία</span>
+      <span class="chip" data-i18n="r5">Αναπληρωτής Αντιπρόεδρος, Ε.ΚΕ.Ψ.Υ.Ε.</span>
+      <span class="chip" data-i18n="r6">Μέλος Δ.Σ., Εταιρεία Προστασίας Ανηλίκων Αθηνών</span>
+      <span class="chip" data-i18n="r7">International Member, American Psychiatric Association</span>
+      <span class="chip" data-i18n="r8">Μέλος, Forensic Psychiatry Section — World Psychiatric Association</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TEAM ============================ -->
+<section class="sec" id="omada">
+  <div class="wrap">
+    <div style="max-width:60ch">
+      <span class="eyebrow rv" data-i18n="teamEyebrow">Η ομάδα</span>
+      <h2 class="rv d1" data-i18n="teamTitle">Δεν δουλεύει μόνος του.</h2>
+      <p class="lead rv d2" style="margin-top:1.3rem" data-i18n="teamLead">Όπου το περιστατικό το απαιτεί, η φροντίδα μοιράζεται σε μια μικρή, σταθερή ομάδα — ώστε το ψυχολογικό και το κοινωνικό σκέλος να μη μένουν πίσω από το ιατρικό.</p>
+    </div>
+    <div class="team">
+      <article class="member rv">
+        <img src="assets/mastora.jpg" width="960" height="960" loading="lazy" alt="Αμαλία Μάστορα, ψυχολόγος" data-lb data-cap="Αμαλία Μάστορα — Ψυχολόγος">
+        <div><h3 data-i18n="m1n">Αμαλία Μάστορα</h3><span data-i18n="m1r">Ψυχολόγος</span><p data-i18n="m1d">Ατομικές συνεδρίες ψυχολογικής υποστήριξης και συνεργασία με τον ιατρό στην παρακολούθηση της πορείας.</p></div>
+      </article>
+      <article class="member rv d1">
+        <img src="assets/feruni.jpg" width="960" height="960" loading="lazy" alt="Ina Feruni, κοινωνική λειτουργός" data-lb data-cap="Ina Feruni — Κοινωνική Λειτουργός">
+        <div><h3 data-i18n="m2n">Ina Feruni</h3><span data-i18n="m2r">Κοινωνική Λειτουργός</span><p data-i18n="m2d">Λήψη κοινωνικού ιστορικού, μελέτη συνθηκών διαβίωσης, εκθέσεις και υποστήριξη της οικογένειας.</p></div>
+      </article>
+    </div>
+
+    <h3 class="rv" style="margin-top:4rem;font-size:1.15rem;font-family:var(--sans);font-weight:600;letter-spacing:.02em" data-i18n="partTitle">Συνεργασίες</h3>
+    <div class="pgrid">
+      <a class="rv" href="https://hellenic-psych.org" target="_blank" rel="noopener"><img src="assets/p-hapa.png" loading="lazy" alt="Ελληνοαμερικανική Ψυχιατρική Εταιρεία"></a>
+      <a class="rv d1" href="https://mitosinstitute.gr" target="_blank" rel="noopener"><img src="assets/p-mitos.png" loading="lazy" alt="ΜΙΤΟΣ — Εταιρεία Ψυχικής Υγείας και Κοινωνικών Παρεμβάσεων"></a>
+      <a class="rv d2" href="https://www.logosarithmos.com" target="_blank" rel="noopener"><img src="assets/p-logos.png" loading="lazy" alt="Λόγος &amp; Αριθμός — Κέντρο Ειδικών Θεραπειών"></a>
+      <a class="rv d3" href="https://www.dunant.gr" target="_blank" rel="noopener"><img src="assets/p-dunant.png" loading="lazy" alt="Ερρίκος Ντυνάν Hospital Center"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ OFFICES ============================ -->
+<section class="sec" id="iatreia" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div style="max-width:60ch">
+      <span class="eyebrow rv" data-i18n="offEyebrow">Τα ιατρεία</span>
+      <h2 class="rv d1" data-i18n="offTitle">Δύο χώροι, η ίδια φροντίδα.</h2>
+      <p class="lead rv d2" style="margin-top:1.3rem" data-i18n="offLead">Στο κέντρο της Αθήνας, ένα βήμα από το μετρό της Πλατείας Μαβίλη, και στη Γλυφάδα για τα νότια προάστια. Όλες οι επισκέψεις γίνονται κατόπιν ραντεβού.</p>
+    </div>
+    <div class="off">
+      <article class="off-card rv">
+        <div class="off-shots">
+          <a href="#" data-lb-a><img src="assets/athens-1.jpg" width="2560" height="1709" loading="lazy" alt="Ο χώρος υποδοχής και συνεδρίας του ιατρείου στην Αθήνα" data-lb data-cap="Ιατρείο Αθήνας"></a>
+          <a href="#" data-lb-a><img src="assets/athens-2.jpg" width="2560" height="1709" loading="lazy" alt="Καθιστικό με πολυθρόνες στο ιατρείο της Αθήνας" data-lb data-cap="Ιατρείο Αθήνας"></a>
+          <a href="#" data-lb-a><img src="assets/athens-3.jpg" width="2560" height="1709" loading="lazy" alt="Το γραφείο του ιατρού στο ιατρείο της Αθήνας" data-lb data-cap="Ιατρείο Αθήνας"></a>
+        </div>
+        <div>
+          <h3 data-i18n="off1n">Ιατρείο Αθήνας</h3>
+          <div class="off-meta" style="margin-top:1rem">
+            <div class="row"><b data-i18n="lblAddr">Διεύθυνση</b><span data-i18n="off1a">Δ. Σούτσου 13, Πλατεία Μαβίλη, Αθήνα 115 21</span></div>
+            <div class="row"><b data-i18n="lblPhone">Τηλέφωνα</b><span><a href="tel:+306939005001">6939 005 001</a> · <a href="tel:+302104409440">210 44 09 440</a></span></div>
+            <div class="row"><b>Fax</b><span>210 64 64 791</span></div>
+            <div class="row"><b data-i18n="lblAccess">Πρόσβαση</b><span data-i18n="off1t">Λίγα μέτρα από τον σταθμό Μετρό «Αμπελόκηποι» και την Πλατεία Μαβίλη.</span></div>
+          </div>
+          <div class="hero-cta"><a class="btn btn-d" href="https://maps.google.com/?q=Δ.+Σούτσου+13+Αθήνα" target="_blank" rel="noopener" data-i18n="lblMap">Άνοιγμα στον χάρτη</a></div>
+        </div>
+      </article>
+      <article class="off-card rv d1">
+        <div class="off-shots">
+          <a href="#" data-lb-a><img src="assets/glyfada-1.jpg" width="1920" height="2560" loading="lazy" alt="Το γραφείο του ιατρείου στη Γλυφάδα" data-lb data-cap="Ιατρείο Γλυφάδας"></a>
+          <a href="#" data-lb-a><img src="assets/glyfada-2.jpg" width="1920" height="2560" loading="lazy" alt="Η είσοδος του ιατρείου στη Γλυφάδα" data-lb data-cap="Ιατρείο Γλυφάδας"></a>
+          <a href="#" data-lb-a><img src="assets/glyfada-3.jpg" width="1920" height="2560" loading="lazy" alt="Χώρος συνεδρίας στο ιατρείο της Γλυφάδας" data-lb data-cap="Ιατρείο Γλυφάδας"></a>
+        </div>
+        <div>
+          <h3 data-i18n="off2n">Ιατρείο Γλυφάδας</h3>
+          <div class="off-meta" style="margin-top:1rem">
+            <div class="row"><b data-i18n="lblAddr">Διεύθυνση</b><span data-i18n="off2a">Δημάρχου Αγγέλου Μεταξά 21, 2ος όροφος, Εμπορικό Κέντρο Galleria, Γλυφάδα 166 75</span></div>
+            <div class="row"><b data-i18n="lblPhone">Τηλέφωνα</b><span><a href="tel:+306939005001">6939 005 001</a> · <a href="tel:+302104409440">210 44 09 440</a></span></div>
+            <div class="row"><b>Email</b><span><a href="mailto:info@myshrink.gr">info@myshrink.gr</a></span></div>
+            <div class="row"><b data-i18n="lblAccess">Πρόσβαση</b><span data-i18n="off2t">Στο κέντρο της Γλυφάδας, για τις ανάγκες των νοτίων προαστίων.</span></div>
+          </div>
+          <div class="hero-cta"><a class="btn btn-d" href="https://maps.google.com/?q=Δημάρχου+Αγγέλου+Μεταξά+21+Γλυφάδα" target="_blank" rel="noopener" data-i18n="lblMap">Άνοιγμα στον χάρτη</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MEDIA ============================ -->
+<section class="sec on-dark" id="mme">
+  <div class="wrap">
+    <div style="max-width:60ch">
+      <span class="eyebrow rv" data-i18n="mmeEyebrow">Στα ΜΜΕ</span>
+      <h2 class="rv d1" data-i18n="mmeTitle">Δημόσιος λόγος για την ψυχική υγεία.</h2>
+      <p class="lead rv d2" style="margin-top:1.3rem;color:#B9CBD5" data-i18n="mmeLead">Τηλεοπτικές και ραδιοφωνικές συμμετοχές, αρθρογραφία και συνεντεύξεις σε έντυπα και ηλεκτρονικά μέσα, με θέματα από την εφηβεία και τον σχολικό εκφοβισμό έως τον ύπνο και τη διαχείριση κρίσεων.</p>
+    </div>
+    <div class="mme">
+      <div class="rv"><span>Τηλεόραση</span><p data-i18n="mm1">Βία και παραβατική συμπεριφορά στην εφηβεία</p></div>
+      <div class="rv d1"><span>ΑΝΤ1 — Υγεία πάνω απ' όλα</span><p data-i18n="mm2">Ύπνος και όνειρα</p></div>
+      <div class="rv d2"><span>Τηλεόραση</span><p data-i18n="mm3">Σχολικός εκφοβισμός</p></div>
+      <div class="rv"><span>Καθημερινή</span><p data-i18n="mm4">Συνέντευξη για την ψυχική υγεία στην κρίση</p></div>
+      <div class="rv d1"><span>Security Manager</span><p data-i18n="mm5">Ψυχολογία και διαχείριση κρίσεων</p></div>
+      <div class="rv d2"><span data-i18n="mm6s">Ραδιόφωνο &amp; Διαδίκτυο</span><p data-i18n="mm6">Από τον κορωνοϊό στον παρανοϊό</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="sec" id="epikoinonia">
+  <div class="wrap ct">
+    <div class="rv">
+      <span class="eyebrow" data-i18n="ctEyebrow">Επικοινωνία</span>
+      <h2 data-i18n="ctTitle">Το πρώτο ραντεβού είναι μια συζήτηση.</h2>
+      <p class="lead" style="margin-top:1.3rem" data-i18n="ctLead">Γράψτε δυο λόγια για αυτό που σας απασχολεί και σε ποιο ιατρείο σας βολεύει να έρθετε. Θα λάβετε απάντηση με διαθέσιμες ώρες.</p>
+      <div class="ct-list" style="margin-top:2rem">
+        <div class="row"><b data-i18n="lblPhone">Τηλέφωνα</b><span><a href="tel:+306939005001">6939 005 001</a><br><a href="tel:+302104409440">210 44 09 440</a></span></div>
+        <div class="row"><b>Email</b><span><a href="mailto:info@myshrink.gr">info@myshrink.gr</a></span></div>
+        <div class="row"><b data-i18n="lblAthens">Αθήνα</b><span data-i18n="off1a">Δ. Σούτσου 13, Πλατεία Μαβίλη, Αθήνα 115 21</span></div>
+        <div class="row"><b data-i18n="lblGlyfada">Γλυφάδα</b><span data-i18n="off2a">Δημάρχου Αγγέλου Μεταξά 21, 2ος όροφος, Γλυφάδα 166 75</span></div>
+        <div class="row"><b data-i18n="lblSocial">Κοινωνικά</b><span><a href="https://www.facebook.com/GiorgosKarampoutakis/" target="_blank" rel="noopener">Facebook</a> · <a href="https://gr.linkedin.com/in/george-karampoutakis-md-phd-msc-666b4140" target="_blank" rel="noopener">LinkedIn</a></span></div>
+      </div>
+    </div>
+    <form class="rv d1" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>Μην συμπληρώσετε: <input name="bot-field"></label></p>
+      <div class="field"><label for="n" data-i18n="fName">Ονοματεπώνυμο</label><input id="n" name="name" type="text" required autocomplete="name"></div>
+      <div class="field"><label for="e" data-i18n="fEmail">Email</label><input id="e" name="email" type="email" required autocomplete="email"></div>
+      <div class="field"><label for="t" data-i18n="fPhone">Τηλέφωνο</label><input id="t" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="m" data-i18n="fMsg">Το μήνυμά σας</label><textarea id="m" name="message" required></textarea></div>
+      <button class="btn btn-p" type="submit" data-i18n="fSend">Αποστολή</button>
+      <p class="note" data-i18n="fNote">Τα στοιχεία σας χρησιμοποιούνται αποκλειστικά για να απαντηθεί το αίτημά σας και τηρείται πλήρες ιατρικό απόρρητο.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <a class="ft-brand" href="#top">
+          <img src="assets/logo.png" width="46" height="46" alt="Λογότυπο ιατρείου">
+          <b data-i18n="brand">Δρ. Γεώργιος Ι. Καραμπουτάκης</b>
+        </a>
+        <p style="font-size:.92rem;max-width:38ch" data-i18n="ftAbout">Ψυχίατρος, MD, MSc, PhD. Κλινική ψυχιατρική, ψυχοθεραπεία, r-TMS και δικανική ψυχιατρική σε Αθήνα και Γλυφάδα.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ftNav">Πλοήγηση</h4>
+        <ul>
+          <li><a href="#iatros" data-i18n="navDoctor">Ο Ιατρός</a></li>
+          <li><a href="#ypiresies" data-i18n="navServices">Υπηρεσίες</a></li>
+          <li><a href="#rtms">r-TMS</a></li>
+          <li><a href="#dikaniki" data-i18n="navForensic">Δικανική</a></li>
+          <li><a href="#viografiko" data-i18n="navCv">Βιογραφικό</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ftOffices">Ιατρεία</h4>
+        <ul>
+          <li data-i18n="off1a">Δ. Σούτσου 13, Πλ. Μαβίλη, Αθήνα 115 21</li>
+          <li data-i18n="off2short">Δημ. Αγγέλου Μεταξά 21, Γλυφάδα 166 75</li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="ftContact">Επικοινωνία</h4>
+        <ul>
+          <li><a href="tel:+306939005001">6939 005 001</a></li>
+          <li><a href="tel:+302104409440">210 44 09 440</a></li>
+          <li><a href="mailto:info@myshrink.gr">info@myshrink.gr</a></li>
+          <li><a href="https://www.facebook.com/GiorgosKarampoutakis/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://gr.linkedin.com/in/george-karampoutakis-md-phd-msc-666b4140" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span data-i18n="ftRights">© <span id="yr"></span> Δρ. Γεώργιος Ι. Καραμπουτάκης. Με επιφύλαξη παντός δικαιώματος.</span>
+      <span>Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Προβολή εικόνας">
+  <button class="lb-x" id="lbx" aria-label="Κλείσιμο">&#10005;</button>
+  <img id="lbimg" src="" alt="">
+  <div class="lb-cap" id="lbcap"></div>
+</div>
+
+<script>
+/* ============================ i18n ============================ */
+window.EN = {
+ brand:"Dr. Georgios I. Karampoutakis", brandShort:"Dr. Karampoutakis", brandSub:"MD, MSc, PhD — Psychiatrist",
+ navDoctor:"The Doctor", navServices:"Services", navForensic:"Forensic", navCv:"Curriculum Vitae", navOffices:"Practices", navContact:"Contact",
+ heroTag:"Psychiatry &amp; Psychotherapy",
+ heroTitle:"A place for what is hardest to say.",
+ heroSub:"Dr. Georgios I. Karampoutakis · MD, MSc, PhD",
+ heroLead:"Clinical psychiatry, cognitive psychotherapy, r-TMS and forensic psychiatry, across two practices — in central Athens and in Glyfada.",
+ ctaBook:"Book an appointment", ctaServices:"See the services",
+ cred1:"Doctor of Medicine, Medical School of the University of Athens",
+ cred2:"Certified in repetitive transcranial magnetic stimulation",
+ cred3n:"2 practices", cred3:"Athens, Mavili Square &amp; Glyfada",
+ cred4:"President of the Hellenic American Psychiatric Association",
+ docEyebrow:"The Doctor",
+ docTitle:"A therapeutic relationship is built on trust first.",
+ docP1:"Dr. Georgios I. Karampoutakis is a psychiatrist, holder of a PhD and an MSc from the National and Kapodistrian University of Athens. He trained at the 1st University Psychiatric Clinic of Aiginiteio Hospital and today practises privately, while also serving as a clinical psychiatrist at the Errikos Dunant Hospital Center.",
+ docP2:"He has extensive experience with panic attacks, anxiety, phobias, depression, obsessive-compulsive disorder, dementia, sleep disorders, psychoses, psychosomatic presentations, addictions and difficulties adjusting to new circumstances of life.",
+ docP3:"His approach combines biological psychiatry with cognitive psychotherapy: every plan is designed for the individual person, reviewed regularly and explained in language they understand. Beyond the consulting room he works in forensic psychiatry as a court expert for the Courts of First Instance and Prosecutors' Offices of Athens and Piraeus, and as a mediator accredited by the Ministry of Justice.",
+ docCap:"Dr. Georgios I. Karampoutakis, Psychiatrist",
+ condEyebrow:"What is treated",
+ condTitle:"What people usually bring to this practice.",
+ condLead:"You do not need to know the name of what is happening to you in order to ask for help. The first meeting exists precisely for that — to name it accurately and give it a plan.",
+ c1:"Panic attacks", c2:"Anxiety &amp; stress", c3:"Phobias", c4:"Depression", c5:"Obsessive-compulsive disorder",
+ c6:"Sleep disorders", c7:"Dementia &amp; cognitive decline", c8:"Psychoses", c9:"Alcohol &amp; substance dependence",
+ c10:"Post-traumatic stress", c11:"Psychosomatic symptoms", c12:"Adjustment disorders",
+ c13:"Difficulties in relationships", c14:"Neuroses", c15:"Sexual dysfunction",
+ srvEyebrow:"Services", srvTitle:"Nine services, one continuous framework of care.",
+ srvLead:"From the first diagnostic assessment to the certificate an employer or a court requires, everything happens in the same practice, with the same doctor, under continuous follow-up.",
+ s1t:"Clinical psychiatric diagnosis",
+ s1d:"A thorough clinical assessment with a full history, mental state examination and, where needed, laboratory or imaging work-up to rule out organic causes. It ends in a clear diagnosis and a treatment plan discussed with you step by step.",
+ s2t:"Cognitive psychotherapy",
+ s2d:"A structured therapeutic intervention that identifies the patterns of thought and behaviour sustaining the symptom and works on them systematically. Sessions are individual, with defined goals and regular review of progress.",
+ s3t:"Medication &amp; follow-up",
+ s3d:"Prescription and monitoring of long-term medication grounded in current psychopharmacology: choice of regimen, dose titration, management of side effects and a planned, gradual withdrawal when the time comes.",
+ s4t:"Clinical assessment of memory function",
+ s4d:"Assessment of memory, attention and executive function with standardised instruments, for the early detection of cognitive decline and dementia. Each assessment comes with a written report and follow-up guidance for the family.",
+ s5t:"Certified psychometric testing",
+ s5d:"Administration and interpretation of standardised instruments such as the WAIS-IV, MMPI-2 and TAT, giving an objective picture of cognitive ability and personality traits. Results are always read against the clinical picture, never in isolation.",
+ s6t:"Psychiatric certificates",
+ s6d:"Certificates for appointment or commencement of employment, for the possession and carrying of hunting and firearm licences, and for any other purpose requiring a documented psychiatric assessment, meeting every legal requirement.",
+ s7t:"Forensic psychiatry",
+ s7d:"Expert reports and Technical Adviser services in criminal and civil medico-legal cases: questions of criminal responsibility, legal capacity, custody, psychological injury and compensation, in reports that hold up in court.",
+ s8t:"Mediation",
+ s8d:"As a mediator accredited by the Ministry of Justice, Dr. Karampoutakis conducts out-of-court dispute resolution — family, civil or employment matters — in a neutral and confidential setting.",
+ s9t:"Psychosocial intervention",
+ s9d:"Social study of living conditions, written reports, support for the patient and the family, and counselling on the management of medico-social problems, in collaboration with a social worker.",
+ rtmsTitle:"Repetitive transcranial magnetic stimulation.",
+ rtmsLead:"A non-invasive, FDA-approved method that stimulates targeted regions of the brain with magnetic pulses. It is delivered in sessions, without anaesthesia and without hospitalisation, and the patient returns to their day immediately afterwards.",
+ rtms1:"Indicated mainly in treatment-resistant depression and in selected cases of obsessive-compulsive disorder",
+ rtms2:"Certified training in the application of the method",
+ rtms3:"No added medication burden — it combines with the rest of the treatment",
+ rtms4:"Always preceded by a full clinical assessment of suitability",
+ rtmsCta:"Ask whether it applies to you",
+ forEyebrow:"Forensic psychiatry", forTitle:"Where psychiatry meets the law.",
+ forLead:"Forensic psychiatry demands two things at once: clinical precision and language that stands up legally. Dr. Karampoutakis works in this field as a court expert, technical adviser and accredited mediator.",
+ for1:"Court expert for the Courts of First Instance and Prosecutors' Offices of Athens and Piraeus",
+ for2:"Technical Adviser in criminal and civil medico-legal cases",
+ for3:"Mediator accredited by the Ministry of Justice",
+ for4:"Managing Director of the Hellenic Society of Medical Experts",
+ for5:"Member of the Forensic Psychiatry Section of the World Psychiatric Association",
+ forCta:"Get in touch about a case",
+ cvEyebrow:"Curriculum Vitae", cvTitle:"Studies, specialisation and appointments.",
+ cvY1:"Medical School", cvT1:"Degree in Medicine, University of Athens", cvD1:"National and Kapodistrian University of Athens.",
+ cvT2:"Harvard Kennedy School of Government, Boston", cvD2:"Executive Education — “Leadership in Crises”.",
+ cvT3:"Master's degree (MSc), University of Athens", cvD3:"“Crisis, Mass Disaster and Emergency Management” — Organisation and Administration stream.",
+ cvT4:"Specialisation in Psychiatry", cvD4:"1st University Psychiatric Clinic, University of Athens, Aiginiteio Hospital.",
+ cvT5:"Doctorate (PhD), University of Athens", cvD5:"“Evaluation of the communication policy of the health authority in managing the H1N1 influenza pandemic”.",
+ cvT6:"Scientific Associate", cvD6:"University Psychiatric Clinic of the University of Athens, Kifisia General Hospital “Agioi Anargyroi”, and the Zografou Community Mental Health Centre.",
+ cvY7:"Today", cvT7:"Private practice &amp; Errikos Dunant Hospital Center", cvD7:"Private psychiatric practice in Athens and Glyfada; clinical psychiatrist at the Errikos Dunant Hospital Center.",
+ cvRoles:"Appointments &amp; offices",
+ r1:"President, Hellenic American Psychiatric Association (HAPA)",
+ r2:"President, MITOS non-profit society",
+ r3:"Managing Director, Hellenic Society of Medical Experts",
+ r4:"Secretary, Branch for the Protection of Psychiatric Practice — Hellenic Psychiatric Association",
+ r5:"Deputy Vice-President, Hellenic Centre for Mental Health and Research",
+ r6:"Board Member, Athens Society for the Protection of Minors",
+ r7:"International Member, American Psychiatric Association",
+ r8:"Member, Forensic Psychiatry Section — World Psychiatric Association",
+ teamEyebrow:"The team", teamTitle:"He does not work alone.",
+ teamLead:"Where a case calls for it, care is shared with a small, settled team — so that the psychological and social side never falls behind the medical one.",
+ m1n:"Amalia Mastora", m1r:"Psychologist", m1d:"Individual psychological support sessions, working alongside the doctor in following the course of treatment.",
+ m2n:"Ina Feruni", m2r:"Social Worker", m2d:"Social history, study of living conditions, written reports and support for the family.",
+ partTitle:"Affiliations",
+ offEyebrow:"The practices", offTitle:"Two rooms, the same care.",
+ offLead:"In central Athens, a step from the metro at Mavili Square, and in Glyfada for the southern suburbs. All visits are by appointment.",
+ off1n:"Athens practice", off1a:"13 D. Soutsou St, Mavili Square, Athens 115 21",
+ off1t:"A few metres from Ampelokipoi metro station and Mavili Square.",
+ off2n:"Glyfada practice", off2a:"21 Dimarchou Angelou Metaxa St, 2nd floor, Galleria Shopping Centre, Glyfada 166 75",
+ off2short:"21 Dim. Angelou Metaxa St, Glyfada 166 75",
+ off2t:"In the centre of Glyfada, serving the southern suburbs.",
+ lblAddr:"Address", lblPhone:"Telephone", lblAccess:"Getting there", lblMap:"Open in maps",
+ lblAthens:"Athens", lblGlyfada:"Glyfada", lblSocial:"Social",
+ mmeEyebrow:"In the media", mmeTitle:"Speaking publicly about mental health.",
+ mmeLead:"Television and radio appearances, articles and interviews in print and online media, on subjects ranging from adolescence and school bullying to sleep and crisis management.",
+ mm1:"Violence and delinquent behaviour in adolescence", mm2:"Sleep and dreams", mm3:"School bullying",
+ mm4:"Interview on mental health in a time of crisis", mm5:"Psychology and crisis management",
+ mm6s:"Radio &amp; online", mm6:"From the coronavirus to paranoia",
+ ctEyebrow:"Contact", ctTitle:"The first appointment is a conversation.",
+ ctLead:"Write a few lines about what is on your mind and which practice suits you. You will receive a reply with available times.",
+ fName:"Full name", fEmail:"Email", fPhone:"Telephone", fMsg:"Your message", fSend:"Send",
+ fNote:"Your details are used solely to answer your enquiry and full medical confidentiality is maintained.",
+ ftAbout:"Psychiatrist, MD, MSc, PhD. Clinical psychiatry, psychotherapy, r-TMS and forensic psychiatry in Athens and Glyfada.",
+ ftNav:"Navigation", ftOffices:"Practices", ftContact:"Contact",
+ ftRights:"© <span id=\"yr\"></span> Dr. Georgios I. Karampoutakis. All rights reserved."
+};
+(function(){
+  var d=document, EL={}, cur='el';
+  d.querySelectorAll('[data-i18n]').forEach(function(el){ var k=el.getAttribute('data-i18n'); if(!(k in EL)) EL[k]=el.innerHTML; });
+  var META={
+    el:{title:"Δρ. Γεώργιος Ι. Καραμπουτάκης — Ψυχίατρος | Αθήνα & Γλυφάδα"},
+    en:{title:"Dr. Georgios I. Karampoutakis — Psychiatrist | Athens & Glyfada"}
+  };
+  function apply(l){
+    cur=l; var dict = l==='en' ? window.EN : EL;
+    d.querySelectorAll('[data-i18n]').forEach(function(el){
+      var k=el.getAttribute('data-i18n'), v=dict[k];
+      if(v===undefined) v=EL[k];
+      if(v!==undefined) el.innerHTML=v;
+    });
+    d.documentElement.lang=l;
+    d.title=META[l].title;
+    var y=d.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+    d.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.lang===l)); });
+    try{ localStorage.setItem('ms-lang', l); }catch(e){}
+  }
+  d.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.lang); }); });
+  try{ var saved=localStorage.getItem('ms-lang'); if(saved==='en') apply('en'); }catch(e){}
+})();
+</script>
+<script>
+(function(){
+  var d=document, reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* header state */
+  var hdr=d.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('stuck', window.scrollY>60); }
+  onScroll(); addEventListener('scroll', onScroll, {passive:true});
+
+  /* mobile nav */
+  var mnav=d.getElementById('mnav');
+  function setNav(o){ mnav.classList.toggle('open',o); d.body.style.overflow=o?'hidden':''; d.getElementById('burger').setAttribute('aria-expanded',o); }
+  d.getElementById('burger').addEventListener('click',function(){setNav(true)});
+  d.getElementById('mclose').addEventListener('click',function(){setNav(false)});
+  mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false)})});
+
+  /* reveal */
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} })},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  d.querySelectorAll('.rv').forEach(function(el){ if(!el.classList.contains('in')) io.observe(el); });
+
+  /* hero parallax */
+  var hi=d.querySelector('.hero-media img');
+  if(hi && !reduced){
+    var t=false;
+    addEventListener('scroll',function(){ if(t)return; t=true; requestAnimationFrame(function(){ var y=window.scrollY; if(y<window.innerHeight) hi.style.transform='translate3d(0,'+(y*0.16).toFixed(1)+'px,0)'; t=false; }); },{passive:true});
+  }
+
+  /* lightbox */
+  var lb=d.getElementById('lb'), lbimg=d.getElementById('lbimg'), lbcap=d.getElementById('lbcap');
+  function open(src,alt,cap){ lbimg.src=src; lbimg.alt=alt||''; lbcap.textContent=cap||''; lb.classList.add('open'); d.body.style.overflow='hidden'; }
+  function close(){ lb.classList.remove('open'); d.body.style.overflow=''; setTimeout(function(){lbimg.src=''},350); }
+  d.addEventListener('click',function(e){
+    var a=e.target.closest('[data-lb-a]'); if(a) e.preventDefault();
+    var im=e.target.closest('img[data-lb]');
+    if(im){ e.preventDefault(); open(im.currentSrc||im.src, im.alt, im.getAttribute('data-cap')); }
+  });
+  d.getElementById('lbx').addEventListener('click',close);
+  lb.addEventListener('click',function(e){ if(e.target===lb) close(); });
+  addEventListener('keydown',function(e){ if(e.key==='Escape'){ close(); setNav(false); } });
+})();
+</script>
+</body>
+</html>
