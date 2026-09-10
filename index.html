@@ -1008,11 +1008,13 @@ window.EN = {
   mnav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setNav(false)})});
 
   /* hero intro: play the entrance once */
-  if(!reduced){
+  if(!reduced && !d.hidden){
     var heroEls=[].slice.call(d.querySelectorAll('.hero .in'));
     heroEls.forEach(function(el){ el.classList.remove('in'); });
     void d.body.offsetWidth;
-    requestAnimationFrame(function(){ requestAnimationFrame(function(){ heroEls.forEach(function(el){ el.classList.add('in'); }); }); });
+    var heroDone=false, heroGo=function(){ if(heroDone) return; heroDone=true; heroEls.forEach(function(el){ el.classList.add('in'); }); };
+    requestAnimationFrame(function(){ requestAnimationFrame(heroGo); });
+    setTimeout(heroGo, 160); /* background tabs throttle rAF — never leave the hero hidden */
   }
 
   /* reveal — content is visible before the reader reaches it */
